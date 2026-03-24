@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GO-Renderer Project Page</title>
+  <meta name="description" content="GO-Renderer: Generative Object Rendering with 3D-aware Controllable Video Diffusion Models">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#top">GO-Renderer</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" data-nav-menu>
+        <a href="#abstract">Abstract</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#results">Results</a>
+        <a href="#applications">Applications</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <h1><span class="hero-title-accent">GO-Renderer</span>: Generative Object Rendering with 3D-aware Controllable Video Diffusion Models</h1>
+        <p class="hero-copy">
+          GO-Renderer combines coarse 3D proxies with a video diffusion model to render objects with accurate viewpoint control,
+          strong multi-view consistency, and realistic lighting in novel environments.
+        </p>
+
+        <div class="authors">
+          <span><a href="https://scholar.google.com/citations?user=Y8AU3RkAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Zekai Gu</a><sup>1,2</sup></span>
+          <span>Shuoxuan Feng<sup>3</sup></span>
+          <span>Yansong Wang<sup>4</sup></span>
+          <span><a href="https://openreview.net/profile?id=~Hanzhuo_Huang1" target="_blank" rel="noopener noreferrer">Hanzhuo Huang</a><sup>5</sup></span>
+          <span>Zhongshuo Du</span>
+          <span><a href="https://afterjourney00.github.io/" target="_blank" rel="noopener noreferrer">Chengfeng Zhao</a><sup>1</sup></span>
+          <span><a href="https://github.com/ChernweiRen" target="_blank" rel="noopener noreferrer">Chengwei Ren</a><sup>1</sup></span>
+          <span><a href="https://totoro97.github.io/" target="_blank" rel="noopener noreferrer">Peng Wang</a><sup>2 &#8224;</sup></span>
+          <span><a href="https://liuyuan-pal.github.io/" target="_blank" rel="noopener noreferrer">Yuan Liu</a><sup>1 <i class="far fa-envelope"></i></sup></span>
+        </div>
+
+        <p class="affiliations">
+          <span><sup>1</sup>The Hong Kong University of Science and Technology</span>
+          <span><sup>2</sup>VAST</span>
+          <span><sup>3</sup>Nanyang Technological University</span>
+          <span><sup>4</sup>Tsinghua University</span>
+          <span><sup>5</sup>ShanghaiTech University</span>
+          <span><sup><i class="far fa-envelope"></i></sup> Corresponding author</span>
+          <span><sup>&#8224;</sup> Project leader</span>
+        </p>
+
+        <div class="link-row">
+          <a class="pill-link" href="#">
+            <i class="ai ai-arxiv" aria-hidden="true"></i>
+            <span>Arxiv</span>
+          </a>
+          <a class="pill-link" href="#">
+            <i class="fab fa-github-alt" aria-hidden="true"></i>
+            <span>Code (coming soon)</span>
+          </a>
+          <a class="pill-link" href="#">
+            <i class="fas fa-globe" aria-hidden="true"></i>
+            <span>Page</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section teaser-section" id="teaser">
+      <div class="container">
+        <figure class="video-card teaser-video-card">
+          <video src="video/go-renderer supp.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="abstract">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Abstract</p>
+        </div>
+        <div class="text-card">
+          <p>
+            Reconstructing a renderable 3D model from images is a useful but challenging task. Recent feedforward 3D
+            reconstruction methods have demonstrated remarkable success in efficiently recovering geometry, but still cannot
+            accurately model the complex appearances of these 3D reconstructed models. Recent diffusion-based generative models
+            can synthesize realistic images or videos of an object using reference images without explicitly modeling its
+            appearance, which provides a promising direction for object rendering, but lacks accurate control over the viewpoints.
+            In this paper, we propose GO-Renderer, a unified framework integrating the reconstructed 3D proxies to guide the video
+            generative models to achieve high-quality object rendering on arbitrary viewpoints under arbitrary lighting
+            conditions. Our method not only enjoys the accurate viewpoint control using the reconstructed 3D proxy but also
+            enables high-quality rendering in different lighting environments using diffusion generative models without explicitly
+            modeling complex materials and lighting. Extensive experiments demonstrate that GO-Renderer achieves state-of-the-art
+            performance across the object rendering tasks, including synthesizing images on new viewpoints, rendering the objects
+            in a novel lighting environment, and inserting an object into an existing video.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Motivation</p>
+          <h2>Why object rendering is still hard</h2>
+        </div>
+        <div class="card-grid three-up">
+          <article class="info-card">
+            <h3>Appearance is hard to reconstruct</h3>
+            <p>
+              Feed-forward 3D reconstruction can recover geometry efficiently, but it still struggles to faithfully model complex
+              surface appearance, materials, and relighting behavior.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>2D generative models lack control</h3>
+            <p>
+              Reference-based video diffusion models can synthesize realistic content, but they often hallucinate unseen regions
+              and cannot follow strict camera trajectories with strong multi-view consistency.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>GO-Renderer combines both strengths</h3>
+            <p>
+              A coarse 3D proxy gives explicit structural guidance, while diffusion priors deliver realistic appearance and
+              lighting without requiring full physical material recovery.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pipeline">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Pipeline</p>
+          <h2>Coordinate-map guided generative object rendering</h2>
+          <p>
+            GO-Renderer first reconstructs a coarse 3D proxy, then renders object-centric coordinate maps for reference views and
+            target trajectories. These maps become dense spatial conditions for the video diffusion model.
+          </p>
+        </div>
+        <figure class="pdf-figure">
+          <img src="images/pipeline.png" alt="Overview of the GO-Renderer architecture from the paper.">
+          <figcaption>
+            Overview of the GO-Renderer architecture from the paper.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="results">
+      <div class="container">
+        <div class="section-heading light-text">
+          <p class="section-kicker">Our Results</p>
+        </div>
+
+        <div class="video-grid">
+          <figure class="video-card">
+            <video src="video/demo1.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+            <figcaption>Demo 1</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video src="video/demo2.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+            <figcaption>Demo 2</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video src="video/demo3.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+            <figcaption>Demo 3</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video src="video/demo4.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+            <figcaption>Demo 4</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video src="video/demo5.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+            <figcaption>Demo 5</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video src="video/demo6.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+            <figcaption>Demo 6</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video src="video/demo7.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+            <figcaption>Demo 7</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video src="video/demo8.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+            <figcaption>Demo 8</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section" id="applications">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Applications</p>
+          <h2>Offline rendering and object insertion</h2>
+          <p>
+            According to the manuscript, GO-Renderer supports practical downstream usage such as Blender-integrated offline
+            rendering and inserting rendered objects into real-world videos with plausible reflections and shadows.
+          </p>
+        </div>
+        <figure class="pdf-figure">
+          <img src="images/app.png" alt="Application examples highlighted in the manuscript.">
+          <figcaption>
+            Application examples highlighted in the manuscript.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section muted-section" id="citation">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Citation</p>
+          <h2>BibTeX</h2>
+        </div>
+        <pre class="citation-block"><code>@article{gu2026gorenderer,
+  title   = {GO-Renderer: Generative Object Rendering with 3D-aware Controllable Video Diffusion Models},
+  author  = {Gu, Zekai and Feng, Shuoxuan and Wang, Yansong and Huang, Hanzhuo and Du, Zhongshuo and Zhao, Chengfeng and Ren, Chengwei and Wang, Peng and Liu, Yuan},
+  year    = {2026}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <p>GO-Renderer project page inspired by the public CoMoVi page layout.</p>
+      <p>
+        Reference template:
+        <a href="https://github.com/IGL-HKUST/CoMoVi/tree/page">CoMoVi page branch</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
