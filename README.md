@@ -41,14 +41,7 @@ GO-Renderer integrates reconstructed 3D proxies with controllable video diffusio
 
 Reconstructing a renderable 3D model from images is a useful but challenging task. Recent feedforward 3D reconstruction methods have demonstrated remarkable success in efficiently recovering geometry, but still cannot accurately model the complex appearances of these 3D reconstructed models. Recent diffusion-based generative models can synthesize realistic images or videos of an object using reference images without explicitly modeling its appearance, which provides a promising direction for object rendering, but lacks accurate control over the viewpoints. In this paper, we propose GO-Renderer, a unified framework integrating the reconstructed 3D proxies to guide the video generative models to achieve high-quality object rendering on arbitrary viewpoints under arbitrary lighting conditions. Our method not only enjoys the accurate viewpoint control using the reconstructed 3D proxy but also enables high-quality rendering in different lighting environments using diffusion generative models without explicitly modeling complex materials and lighting. Extensive experiments demonstrate that GO-Renderer achieves state-of-the-art performance across the object rendering tasks, including synthesizing images on new viewpoints, rendering the objects in a novel lighting environment, and inserting an object into an existing video.
 
-## Assets
-
-- `assets/teaser.png`: repository preview image for the project.
-- `assets/pipeline.png`: pipeline figure from the project page.
-- `assets/app.png`: application examples from the project page.
-
 ## TODO
 
-- [ ] Release project code.
-- [ ] Release paper links and checkpoints.
+- [ ] Release project code and checkpoints.
 - [ ] Release additional assets and documentation.
