@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  ArXiv (coming soon) &nbsp;|&nbsp;
+  <a href="https://arxiv.org/abs/2603.23246">ArXiv</a> &nbsp;|&nbsp;
   <a href="https://igl-hkust.github.io/GO-Renderer/">Project Page</a> &nbsp;|&nbsp;
   <a href="https://github.com/IGL-HKUST/GO-Renderer">Code</a>
 </p>
