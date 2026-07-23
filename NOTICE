@@ -1,0 +1,30 @@
+GO-Renderer
+Copyright 2026 The GO-Renderer Authors
+
+This product includes software developed by the GO-Renderer authors and
+contains modified portions of the following open-source projects:
+
+VideoX-Fun
+https://github.com/aigc-apps/VideoX-Fun
+Licensed under the Apache License, Version 2.0.
+
+Hugging Face Diffusers
+https://github.com/huggingface/diffusers
+Copyright 2022 The Hugging Face Team
+Licensed under the Apache License, Version 2.0.
+
+ComfyUI-MochiWrapper
+https://github.com/kijai/ComfyUI-MochiWrapper
+The parameter-placement helper used by sequential CPU offload is adapted from
+this project and remains licensed under the Apache License, Version 2.0.
+
+Wan2.1 and Wan2.2 video-generation model code and model interfaces
+https://github.com/Wan-Video/Wan2.1
+https://github.com/Wan-Video/Wan2.2
+Copyright the Wan contributors
+Used under the terms published by the upstream project.
+
+The corresponding copyright and license notices in modified source files
+remain in effect. Third-party Python dependencies are distributed under their
+respective licenses. This source release does not include or grant rights to
+any base-model weights, GO-Renderer checkpoints, or training datasets.

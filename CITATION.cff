@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use GO-Renderer, please cite the paper below."
+title: "GO-Renderer"
+type: software
+version: 0.1.0
+license: Apache-2.0
+authors:
+  - family-names: Gu
+    given-names: Zekai
+  - family-names: Dai
+    given-names: Bo
+  - family-names: Fu
+    given-names: Yanwei
+  - family-names: Wetzstein
+    given-names: Gordon
+  - family-names: Tan
+    given-names: Ping
+url: "https://igl-hkust.github.io/GO-Renderer/"
+preferred-citation:
+  type: article
+  title: "GO-Renderer: Geometry-Guided Object Rendering for Controllable Video Generation"
+  authors:
+    - family-names: Gu
+      given-names: Zekai
+    - family-names: Dai
+      given-names: Bo
+    - family-names: Fu
+      given-names: Yanwei
+    - family-names: Wetzstein
+      given-names: Gordon
+    - family-names: Tan
+      given-names: Ping
+  journal: "arXiv preprint arXiv:2603.23246"
+  year: 2026
+  doi: 10.48550/arXiv.2603.23246
+  url: "https://arxiv.org/abs/2603.23246"

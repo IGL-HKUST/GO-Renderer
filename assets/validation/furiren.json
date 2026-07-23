@@ -1,0 +1,34 @@
+[
+  {
+    "type": "video",
+    "name": "furiren_t2v",
+    "mode": "t2v",
+    "seed": 65,
+    "text": "a large, cartoonish statue of a toy. The statue stands in a sunlit, open plaza with historic stone buildings and lush green trees in the background. The sky is clear and blue.",
+    "ref": "furiren/ref.mp4",
+    "ref_coordmap": "furiren/ref_coordmap.mp4",
+    "fg_coordmap": "furiren/fg_coordmap_arcright.mp4"
+  },
+  {
+    "type": "video",
+    "name": "furiren_i2v",
+    "mode": "i2v",
+    "seed": 66,
+    "text": "a large, cartoonish statue of a toy. The statue stands in a sunlit, open plaza with historic stone buildings and lush green trees in the background. The sky is clear and blue. The camera is rotating.",
+    "ref": "furiren/ref.mp4",
+    "ref_coordmap": "furiren/ref_coordmap.mp4",
+    "fg_coordmap": "furiren/fg_coordmap_rotate75.mp4",
+    "firstframe": "furiren/firstframe.png"
+  },
+  {
+    "type": "video",
+    "name": "furiren_bg",
+    "mode": "bg",
+    "seed": 70,
+    "text": "Day time. A huge cartoon toy is placed in the center of city.",
+    "ref": "furiren/ref.mp4",
+    "ref_coordmap": "furiren/ref_coordmap.mp4",
+    "fg_coordmap": "furiren/fg_coordmap_shanghai.mp4",
+    "bgvideo": "furiren/bg_shanghai.mp4"
+  }
+]

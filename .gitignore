@@ -1,0 +1,67 @@
+# Local model weights and private datasets
+/ckpts/
+/checkpoints/
+/models/
+/datasets/
+/tests/
+
+# Generated experiments and media
+/outputs/
+/output/
+/logs/
+/wandb/
+/samples/
+/examples/
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+__pypackages__/
+
+# Packaging
+/build/
+/dist/
+*.egg-info/
+.eggs/
+/wheels/
+
+# Test and analysis caches
+.pytest_cache/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.pyre/
+.ruff_cache/
+.tox/
+.nox/
+
+# IDE, notebook, and OS files
+.vscode/
+.idea/
+.ipynb_checkpoints/
+.DS_Store
+
+# Local secrets and logs
+.env
+.env.*
+!.env.example
+*.log
+*.out
+
+# Local agent instructions
+/AGENTS.md
+/CLAUDE.md
+/.agents/
+/.claude/
+/.codex/
+/exp1.py
+/tools/
